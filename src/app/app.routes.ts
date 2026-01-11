@@ -2,12 +2,15 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: 'home',
-    loadComponent: () => import('./home/home.page').then((m) => m.HomePage),
+    path: '',
+    redirectTo: 'kanban-board',
+    pathMatch: 'full',
   },
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full',
+    path: 'kanban-board',
+    loadComponent: () =>
+      import('./kanban/components/kanban-board/kanban-board.component').then(
+        (m) => m.KanbanBoardComponent
+      ),
   },
 ];

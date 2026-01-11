@@ -1,0 +1,7 @@
+<div class="board" *ngIf="board$ | async as board">
+  <app-kanban-column
+    *ngFor="let col of board.columns"
+    [column]="col"
+    [connectedDropLists]="getConnectedDropLists(board.columns)"
+  ></app-kanban-column>
+</div>

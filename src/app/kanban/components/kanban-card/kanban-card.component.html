@@ -1,0 +1,16 @@
+<!-- <div class="card">
+  <input [ngModel]="card.title" (ngModelChange)="onTitleChange($event)" />
+  <button (click)="delete()">🗑</button>
+</div> -->
+<div class="card">
+  <span class="drag-handle" cdkDragHandle>⋮⋮</span>
+
+  <input
+    [(ngModel)]="localTitle"
+    (ngModelChange)="onInputChange($event)"
+    (blur)="persistTitle()"
+    (keydown.enter)="persistTitle()"
+  />
+
+  <button type="button" (click)="delete()">🗑</button>
+</div>
