@@ -1,38 +1,4 @@
-<!-- <div class="column">
-  <h3>{{ column.title }}</h3>
-
-  <div
-    cdkDropList
-    [id]="column.id"
-    [cdkDropListData]="column.cards"
-    [cdkDropListConnectedTo]="connectedDropLists"
-    (cdkDropListDropped)="drop($event)"
-    class="card-list"
-  >
-    <div *ngFor="let card of column.cards" cdkDrag class="card-wrapper">
-      <app-kanban-card [card]="card" [columnId]="column.id"></app-kanban-card>
-    </div>
-  </div>
-
-  <button (click)="addCard()" class="btn">+ Add Card</button>
-</div> -->
-<!-- <div
-  cdkDropList
-  [id]="column.id"
-  [cdkDropListData]="column.cards"
-  [cdkDropListConnectedTo]="connectedDropLists"
-  (cdkDropListDropped)="drop($event)"
-  class="card-list"
->
-  <div
-    *ngFor="let card of column.cards; trackBy: trackByCardId"
-    cdkDrag
-    class="card-wrapper"
-  >
-    <app-kanban-card [card]="card" [columnId]="column.id"></app-kanban-card>
-  </div>
-</div> -->
-<div class="column">
+<div class="column" [ngClass]="column.id">
   <h3>{{ column.title }}</h3>
 
   <div
@@ -52,7 +18,7 @@
     </div>
   </div>
 
-  <ion-button expand="block" fill="outline" (click)="addCard()">
+  <ion-button expand="block" fill="outline" (click)="addCard()" class="btn">
     + Add Card
   </ion-button>
 </div>

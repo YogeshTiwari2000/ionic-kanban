@@ -1,31 +1,3 @@
-// import { Component, Input } from '@angular/core';
-// import { KanbanCard, ColumnId } from '../../models/kanban.models';
-// import { CommonModule } from '@angular/common';
-// import { FormsModule } from '@angular/forms';
-// import { KanbanStateService } from '../../services/kanban-state.service';
-
-// @Component({
-//   selector: 'app-kanban-card',
-//   standalone: true,
-//   styleUrls: ['./kanban-card.component.scss'],
-//   templateUrl: './kanban-card.component.html',
-//   imports: [CommonModule, FormsModule],
-// })
-// export class KanbanCardComponent {
-//   @Input() card!: KanbanCard;
-//   @Input() columnId!: ColumnId;
-
-//   constructor(private state: KanbanStateService) {}
-
-//   delete() {
-//     this.state.deleteCard(this.columnId, this.card.id);
-//   }
-
-//   onTitleChange(title: string) {
-//     this.state.updateCardTitle(this.columnId, this.card.id, title);
-//   }
-// }
-
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { KanbanCard, ColumnId } from '../../models/kanban.models';
 import { CommonModule } from '@angular/common';
